@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+    --background: 0.07 0.02 270;
+    --foreground: 0.97 0 0;
+    --card: 0.1 0.02 270;
+    --card-foreground: 0.97 0 0;
+    --popover: 0.12 0.02 270;
+    --popover-foreground: 0.97 0 0;
+    --primary: 0.54 0.24 264;
+    --primary-foreground: 0.97 0 0;
+    --secondary: 0.15 0.02 270;
+    --secondary-foreground: 0.97 0 0;
+    --muted: 0.15 0.02 270;
+    --muted-foreground: 0.65 0.02 270;
+    --accent: 0.54 0.24 264;
+    --accent-foreground: 0.97 0 0;
+    --destructive: 0.58 0.22 27;
+    --destructive-foreground: 0.97 0 0;
+    --border: 1 0 0 / 10%;
+    --input: 1 0 0 / 10%;
+    --ring: 0.54 0.24 264;
+    --chart-1: 0.54 0.24 264;
+    --chart-2: 0.7 0.17 162;
+    --chart-3: 0.77 0.19 70;
+    --chart-4: 0.63 0.27 304;
+    --chart-5: 0.65 0.25 16;
+    --sidebar: 0.1 0.02 270;
+    --sidebar-foreground: 0.97 0 0;
+    --sidebar-primary: 0.54 0.24 264;
+    --sidebar-primary-foreground: 0.97 0 0;
+    --sidebar-accent: 0.15 0.02 270;
+    --sidebar-accent-foreground: 0.97 0 0;
+    --sidebar-border: 1 0 0 / 10%;
+    --sidebar-ring: 0.54 0.24 264;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #070812;
+    color: #f2f4ff;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Hide scrollbar globally for content rows */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom scrollbar for main content */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0e1020;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2d4a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: color, background-color, border-color, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* But don't transition layout properties everywhere */
+.no-transition-layout * {
+  transition: none;
+}
